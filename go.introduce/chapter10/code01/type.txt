@@ -1,0 +1,5 @@
+01    type Value struct {
+02    	typ *rtype
+03    	ptr unsafe.Pointer
+04    	flag
+05    }

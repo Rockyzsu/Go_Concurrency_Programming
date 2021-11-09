@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Go SSE</title>
+</head>
+<h1>Go SSE</h1>
+<div id="msg"></div>
+
+<body>
+    <script>
+        window.onload = function() {
+            var client = new EventSource("http://localhost:8080/sse")
+            client.onmessage = function(msg) {
+                document.getElementById("msg").innerHTML += msg.data + "<br/>"
+                console.log(msg)
+            }
+        }
+    </script>
+</body>
+
+</html>

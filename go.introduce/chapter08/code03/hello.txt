@@ -1,0 +1,2 @@
+Hello Go
+Hello Golang

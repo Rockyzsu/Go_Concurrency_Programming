@@ -1,0 +1,2 @@
+Hello Go!
+你好,TypeScript!

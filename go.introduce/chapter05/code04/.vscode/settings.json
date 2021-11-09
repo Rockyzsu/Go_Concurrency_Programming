@@ -1,0 +1,33 @@
+{
+    "files.autoSave": "onFocusChange",
+    "files.encoding": "utf8",
+    "files.autoSaveDelay": 1000,
+    "go.autocompleteUnimportedPackages": true,
+    "go.buildOnSave": "off",
+    "go.lintOnSave": "package",
+    "go.buildFlags": [],
+    "go.lintFlags": [],
+    "go.vetFlags": [],
+    "go.goroot": "C:\\Go",
+    "go.gopath": "C:\\GoWork",
+    "go.formatTool": "goreturns",
+    
+    "go.gocodeFlags": [
+        "-builtin",
+        "-ignore-case",
+        "-unimported-packages"
+    ],
+    "go.delveConfig": {
+        "dlvLoadConfig": {
+            "followPointers": true,
+            "maxVariableRecurse": 1,
+            "maxStringLen": 64,
+            "maxArrayValues": 64,
+            "maxStructFields": -1
+        },
+        "apiVersion": 2,
+        "showGlobalVariables": true
+    },
+    //不启用gopls
+   "go.useLanguageServer": false
+}

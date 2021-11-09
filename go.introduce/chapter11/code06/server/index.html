@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="/css/index.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/font/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+    <h1>Hello Go</h1>
+
+    <img class="avatar" src="/images/avatar5.png" />
+
+    <i class="fa fa-camera-retro fa-3x"></i>
+    <div>
+        <span style="width:60px;display: inline-block;">用户名:</span>
+        <input type="text" id="uname" />
+    </div>
+    <div style="margin-top: 6px;">
+        <span style="width:60px;display: inline-block;">密 码:</span>
+        <input type="password" id="pwd" />
+    </div>
+    <br/>
+    <div><input type="button" id="btnlogin" value="登录" /></div>
+    <div id="msg"></div>
+    <script src="/js/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#btnlogin").on("click", function(e) {
+                var json = {};
+                json.api = "login";
+                json.token = "CUEADS123RQ3INNFADKMKYd2017";
+                var data = {};
+                data.uname = $("#uname").val();
+                data.pwd = $("#pwd").val();
+                json.data = JSON.stringify(data);
+                console.log(json)
+                $.post("/api", json, function(result) {
+                    console.log(result)
+                    $("#msg").text(result);
+                });
+            });
+
+        });
+    </script>
+</body>
+
+</html>

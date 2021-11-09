@@ -1,0 +1,9 @@
+
+//go test -bench="."
+//go test -bench="." -race
+//go test -bench="." -cpuprofile cpu.out
+//go tool pprof -svg cpu.out > cpu.svg
+//go test -bench="." -memprofile mem.out
+//go tool pprof -svg mem.out > mem.svg
+//Is Graphviz installed?
+//exec: "dot": executable file not found in %PATH%

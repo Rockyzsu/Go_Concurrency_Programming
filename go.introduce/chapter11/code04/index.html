@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Html5 WebSocket</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var sock = null;
+        var wsuri = "ws://localhost:8080/echo";
+        window.onload = function() {
+            sock = new WebSocket(wsuri);
+            //建立连接后触发
+            sock.onopen = function() {
+                    console.log("connected to " + wsuri);
+                }
+                //关闭连接时候触发
+            sock.onclose = function(e) {
+                    console.log("connection closed (" + e.code + ")");
+                }
+                //收到消息后触发
+            sock.onmessage = function(e) {
+                    console.log("收到消息:" + e.data);
+                }
+                //发生错误时触发
+            sock.onerror = function(e) {
+                console.log("错误:" + wsuri)
+            }
+        };
+        //发送消息
+        function send() {
+            var msg = document.getElementById('message').value;
+            if (sock) {
+                sock.send(msg);
+            }
+
+        };
+    </script>
+    <h1>Go WebSocket</h1>
+    <form>
+        <p>
+            消息: <input id="message" type="text" value="猜猜年龄">
+        </p>
+    </form>
+    <button onclick="send();">发送消息</button>
+</body>
+
+</html>
