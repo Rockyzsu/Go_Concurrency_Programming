@@ -4,7 +4,7 @@
 
 《Go并发编程实战》封面
 
-![](http://xximg.30daydo.com/sharex/20211109201352.png?imageView2/3/w/400)
+![封面](http://xximg.30daydo.com/sharex/20211109201352.png?imageView2/3/w/400)
 
 
 
@@ -12,7 +12,7 @@
 
 
 
-![](http://xximg.30daydo.com/picgo/1629101231773_remove_icon.png?imageView2/3/w/400)
+![星球](http://xximg.30daydo.com/picgo/1629101231773_remove_icon.png?imageView2/3/w/400)
 
 
 
